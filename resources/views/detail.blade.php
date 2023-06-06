@@ -1,15 +1,8 @@
 @extends('layouts.app')
 
 
-
 @section('content')
 
-    <main class="py-4">
-        <div class="container">
-            <div class="row">
-                @include('layouts.nav')
-            
-                <div class="col-md-10">
                     
                  <ul class="list-group">   
 
@@ -18,8 +11,4 @@
                     <li class="list-group-item">{!! nl2br(e($posts[0]['text'])) !!}</li>
                  </ul>  
 
-                </div>
-            </div>
-        </div>
-    </main>
 @endsection
