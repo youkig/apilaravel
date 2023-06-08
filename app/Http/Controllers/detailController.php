@@ -7,13 +7,15 @@ use App\Models\Whether;
 
 class detailController extends Controller
 {
-    public function detail(Request $request)
+    public function detail($id)
     {
-        $requestdata=$request->all();
+        //引数が(Requeset $request)のとき
+        //$requestdata=$request->all();
         
         $wether = new Whether;
         $wethernav = Whether::orderBy('datename','desc')->get();
-        $posts =Whether::where('id',$requestdata['id'])->get();
+        //$posts =Whether::where('id',$requestdata['id'])->get();
+        $posts =Whether::where('id',$id)->get();
         //dd($posts);
         $title = $posts[0]['datename']."の東京の天気予報";
         //return view('detail',[

@@ -21,4 +21,4 @@ Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/', [App\Http\Controllers\postController::class, 'index'])->name('index');//
-Route::get('/detail', [App\Http\Controllers\detailController::class, 'detail'])->name('detail');
+Route::get('/detail/{id}', [App\Http\Controllers\detailController::class, 'detail'])->name('detail');
