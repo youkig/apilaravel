@@ -3,7 +3,7 @@
 
 @section('content')
 
-                    
+<div class="col-md-8">        
                  <ul class="list-group">   
 
                     <li class="list-group-item">日付：{{ $posts[0]['datename'] }}</li>
